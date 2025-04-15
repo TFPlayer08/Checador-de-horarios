@@ -1,0 +1,25 @@
+#virtual environment
+venv/
+horarios/
+.env/
+.venv/
+
+#python cache files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# VS Code settings
+.vscode/
+
+# Database files
+instance/
+*.db
+
+# Environment variables
+.env
+
+# Distribution / packaging
+dist/
+build/
+*.egg-info/
