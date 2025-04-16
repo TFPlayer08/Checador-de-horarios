@@ -4,7 +4,7 @@ app = Flask(__name__)
 
 app.config["SESSION_PERMANENT"] = False
 app.config["SESSION_TYPE"] = "filesystem"
-app.secret_key = 'tu_clave_secreta_aqui'  # Necesario para sessions y flash
+#app.secret_key = 'tu_clave_secreta_aqui'  # Necesario para sessions y flash
 
 @app.route("/")
 def index():
@@ -34,5 +34,16 @@ def register():
         return redirect(url_for('index'))
     return render_template('register.html')
 
+@app.route("/estadisticas")
+def statistics():
+    return render_template("estadisticas.html")
+
+@app.route("/vacaciones", methods=["GET", "POST"])
+def vacations():
+    return render_template("vacaciones.html")
+
+@app.route("/inicio", methods=["GET", "POST"])
+def inicio():
+    return render_template("inicio.html")
 if __name__ == '__main__':
     app.run(debug=True)
